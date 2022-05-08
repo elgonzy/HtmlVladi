@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/bb694e241f.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link href="css/estils.css" rel="stylesheet" type="text/css">
+    <title>Form Bootstrap</title>
+  </head>
+  <body>
+    <article >
+      <section class=" gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" >
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><i class="fas fa-address-card"> Formulari de registre</i></h3>
+
+                  <form class="" action="exerciciFormulari.php" method="GET ">
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                          <input type="text" id="firstName" class="form-control form-control-lg" name="firstName" />
+                          <label class="form-label" for="firstName" >Nom</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                          <input type="text" id="lastName" name="lastName" class="form-control form-control-lg" />
+                          <label class="form-label" for="lastName">Cognom</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                        <div class="form-outline datepicker w-100">
+                          <input
+                          type="date"
+                          class="form-control form-control-lg"
+                          id="birthdayDate" name="birthdayDate"
+                          />
+                          <label for="birthdayDate" class="form-label">Data neixement</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4">
+
+                        <h6 class="mb-2 pb-1">Sexe: </h6>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                          class="form-check-input"
+                          type="radio"
+
+                          id="genere"
+                          value="Dona"
+                          checked
+                          name="genere"
+
+                          />
+                          <label class="form-check-label" for="femaleGender">Dona</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                          class="form-check-input"
+                          type="radio"
+                      
+                          id="maleGender"
+                          value="Home"
+                          name="genere"
+
+                          />
+                          <label class="form-check-label" for="maleGender">Home</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                          class="form-check-input"
+                          type="radio"
+                          id="ohter"
+                          value="Altres"
+                          name="genere"
+
+                          />
+                          <label class="form-check-label" for="otherGender">Altres</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input type="email" id="emailAddress" name="email" class="form-control form-control-lg" />
+                          <label class="form-label" for="emailAddress">Email</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="col-12">
+
+                          <select class="select form-control-lg" name="curs">
+                            <option value="Curs" disabled>Curs</option>
+                            <option value="Eso">ESO</option>
+                            <option value="CM">Cicle mitja</option>
+                            <option value="CS">Cicle superior</option>
+                          </select>
+                          <label class="form-label select-label">Escull el teu curs</label>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                      <input class="btn btn-primary btn-lg" type="submit" value="Enviar" >
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </body>
+</html>

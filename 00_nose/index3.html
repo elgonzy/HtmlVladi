@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Aquestra es l'adreça:</p>
+  <p> Carrer del 2n habitatge: <span id="nomcarrer"></span></p>
+  <p> Numero del 1 habitatge: <span id="numhabitatge"></span></p>
+
+
+  <script>   	
+	var contingutJSON ={
+    "habitatges":[
+    {
+        "carrer":"Gran",
+        "num":2,
+        "portaPlanta":4
+       
+    },  
+    {
+      "carrer":"Petit",
+        "num":1,
+        "portaPlanta":2
+    } 
+  ]  
+  };
+    document.getElementById("nomcarrer").innerHTML = contingutJSON.habitatges[1].carrer;
+    document.getElementById("numhabitatge").innerHTML = contingutJSON.habitatges[0].num;
+   
+  </script>
+
+
+</body>
+</html>
