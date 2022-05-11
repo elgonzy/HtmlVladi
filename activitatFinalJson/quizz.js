@@ -22,19 +22,101 @@ let quizJSON = {
                 "13"
             ],
             "answer": "3"
+        },
+        {
+            "question": "How to check an input from JS?",
+            "options": [
+                "input type='rounded' checked",
+                ".checked = true;",
+                "style:'checked'",
+                "semen en lata"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "Where Mitu was born?",
+            "options": [
+                "Ceuta",
+                "Melilla",
+                "Bucharest",
+                "GitanoLand"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "Where Cristian was born?",
+            "options": [
+                "Chile",
+                "Peru",
+                "Melilla",
+                "MoroLand"
+            ],
+            "answer": "1"
+        },
+        {
+
+            "question": "Which one is correct team name in Soccer?",
+            "options": [
+                "Barca",
+                "Rial Madrid",
+                "Diabetis",
+                "Atletico De Madrid"
+            ],
+            "answer": "4"
+
+        },
+        {
+            "question": "3 + 7 = ?",
+            "options": [
+                "10",
+                "11",
+                "12",
+                "13"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "How to use css correctly?",
+            "options": [
+                "input type='rounded' checked",
+                ".checked = true;",
+                "style='margin:40%' ",
+                "semen en lata"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "Where Pol was born?",
+            "options": [
+                "Ceuta",
+                "Barcelona",
+                "Bucharest",
+                "GitanoLand"
+            ],
+            "answer": "4"
+        },
+        {
+            "question": "Where Xavi was born?",
+            "options": [
+                "Sanseloni",
+                "Sansa",
+                "San Celoni",
+                "MoroLand"
+            ],
+            "answer": "3"
         }
     ]
-}
-    ;
+};
+
+let index = 0;
+let answer ;
+let selectedAnswer = [];
 
 //#region index management
 
-let index = 0;
-
 function increaseIndex() {
-    
-    correct();
-    if (index < quizJSON.quiz.length-1) {
+
+    if (index < quizJSON.quiz.length - 1) {
         index++;
     }
     update();
@@ -61,9 +143,6 @@ function resetIndex() {
 
 //#region quiz manager
 
-let answer = quizJSON.quiz.length;
-let selectedAnswer = 2;
-
 function getChecked() {
 
     const checkBox = [document.getElementById('option0').checked,
@@ -72,30 +151,37 @@ function getChecked() {
     document.getElementById('option3').checked];
 
     for (let i = 0; i < checkBox.length; i++) {
-        
+
         if (checkBox[i] === true) {
             console.log(true);
-            selectedAnswer = i ;
+            selectedAnswer[index] = i;
             break;
         } else {
             console.log(false);
         }
-        
+
     }
 }
 
-function correct(){
+function correct() {
     
+    answer=0;
     console.log("Correcting...");
-    if (selectedAnswer != parseInt(quizJSON.quiz[index].answer)) {
-        answer--;
+    for (let i = 0; i < selectedAnswer.length; i++) {
+
+        console.log(selectedAnswer[i]);
+        console.log(quizJSON.quiz[i].answer);
+        if (selectedAnswer[i] + 1 == parseInt(quizJSON.quiz[i].answer)) {
+            answer++;
+        }
+
     }
 
 }
 
 function showCorrect() {
 
-    //document.getElementById("").innerHTML = "Num of correct answers:";
+    correct();
     document.getElementById("showCorrectAnswers").innerHTML = answer;
 
 }
@@ -107,11 +193,31 @@ function update() {
     console.log("S'han actualitzat les dades");
 
     document.getElementById("question").innerHTML = quizJSON.quiz[index].question;
-    document.getElementById("labelOption0").innerHTML = quizJSON.quiz[index].options[0];
-    document.getElementById("labelOption1").innerHTML = quizJSON.quiz[index].options[1];
-    document.getElementById("labelOption2").innerHTML = quizJSON.quiz[index].options[2];
-    document.getElementById("labelOption3").innerHTML = quizJSON.quiz[index].options[3];
+    for (let i = 0; i < 4; i++) 
+        document.getElementById("labelOption"+i).innerHTML = quizJSON.quiz[index].options[i];
     
+    switch (selectedAnswer[index]) {
+        case 0:
+            document.getElementById("option0").checked = true;
+            break;
+        case 1:
+            document.getElementById("option1").checked = true;
+            break;
+        case 2:
+            document.getElementById("option2").checked = true;
+            break;
+        case 3:
+            document.getElementById("option3").checked = true;
+            break;
+        default:
+            document.getElementById("option0").checked = false;
+            document.getElementById("option1").checked = false;
+            document.getElementById("option2").checked = false;
+            document.getElementById("option3").checked = false;
+            break;
+
+    }
+
 }
 
 update();
