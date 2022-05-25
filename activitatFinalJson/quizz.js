@@ -109,7 +109,7 @@ let quizJSON = {
 };
 
 let index = 0;
-let answer ;
+let answer;
 let selectedAnswer = [];
 
 //#region index management
@@ -164,8 +164,8 @@ function getChecked() {
 }
 
 function correct() {
-    
-    answer=0;
+
+    answer = 0;
     console.log("Correcting...");
     for (let i = 0; i < selectedAnswer.length; i++) {
 
@@ -182,17 +182,17 @@ function correct() {
 function showCorrect() {
 
     correct();
-    document.getElementById("showCorrectAnswers").innerHTML = "Your points are: "+answer;
+    document.getElementById("showCorrectAnswers").innerHTML = "Your points are: " + answer;
 
 }
 
 //#endregion
 
-function reset(){
+function reset() {
 
     resetIndex();
     document.getElementById("showCorrectAnswers").innerHTML = "";
-    selectedAnswer=[];
+    selectedAnswer = [];
     update();
 
 }
@@ -200,30 +200,20 @@ function reset(){
 function update() {
 
     console.log("S'han actualitzat les dades");
-
-    document.getElementById("question").innerHTML = quizJSON.quiz[index].question;
-    for (let i = 0; i < 4; i++) 
-        document.getElementById("labelOption"+i).innerHTML = quizJSON.quiz[index].options[i];
     
-    switch (selectedAnswer[index]) {
-        case 0:
-            document.getElementById("option0").checked = true;
-            break;
-        case 1:
-            document.getElementById("option1").checked = true;
-            break;
-        case 2:
-            document.getElementById("option2").checked = true;
-            break;
-        case 3:
-            document.getElementById("option3").checked = true;
-            break;
-        default:
-            document.getElementById("option0").checked = false;
-            document.getElementById("option1").checked = false;
-            document.getElementById("option2").checked = false;
-            document.getElementById("option3").checked = false;
-            break;
+    document.getElementById("question").innerHTML = quizJSON.quiz[index].question;
+    
+    for (let i = 0; i < 4; i++)
+        document.getElementById("labelOption" + i).innerHTML = quizJSON.quiz[index].options[i];
+
+    for (let index = 0; index < 4; index++) {
+        if (selectedAnswer[index] == i) {
+            document.getElementById("option" + i).checked = true;
+
+        } else {
+            document.getElementById("option" + i).checked = false;
+
+        }
 
     }
 
