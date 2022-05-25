@@ -182,11 +182,20 @@ function correct() {
 function showCorrect() {
 
     correct();
-    document.getElementById("showCorrectAnswers").innerHTML = answer;
+    document.getElementById("showCorrectAnswers").innerHTML = "Your points are: "+answer;
 
 }
 
 //#endregion
+
+function reset(){
+
+    resetIndex();
+    document.getElementById("showCorrectAnswers").innerHTML = "";
+    selectedAnswer=[];
+    update();
+
+}
 
 function update() {
 

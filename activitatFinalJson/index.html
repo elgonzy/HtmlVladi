@@ -20,17 +20,17 @@
         <h1 id="title" class="text-light text-center">QuizzzVial</h1>
 
     </header>
-    <article>
+    <article class="my-5">
         <section class="row">
             <div class="py-5">
                 <div class="row align-items-center">
                     <div class="offset-2 col-8">
                         <div class="card shadow-lg card-registration">
                             <div class="row card-body p-4 pb-2 p-5">
-                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><i class="fa-solid fa-ºquestion"><span class="ms-3"
-                                    id="question"></span></i>
+                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><i class="fa-solid fa-ºquestion"><span
+                                            class="ms-3" id="question"></span></i>
                                 </h3>
-                                <div class="offset-1 col-5">
+                                <div class="offset-1 col-5 mt-3">
                                     <label class="me-2 fw-bold" for="option0" id="labelOption0"></label>
                                     <input class="text-center " type="radio" name="option" id="option0"
                                         onchange="getChecked()">
@@ -47,7 +47,7 @@
                                     <input class="text-center " type="radio" name="option" id="option3"
                                         onchange="getChecked()">
                                 </div>
-                                <div class="col-6 mt-3">
+                                <div class="col-6 ">
                                     <input class="me-3 pe-2 ps-2 py-2 green-button" type="button"
                                         value="Previous question" onclick="decreaseIndex()">
                                     <input class="pe-4 ps-4 py-2 green-button" type="button" value="Next question"
@@ -55,6 +55,9 @@
                                     <p></p>
                                     <input class="py-2 green-button" id="correctQuiz" type="button" value="Correct quiz"
                                         onclick="showCorrect()">
+                                    <p></p>
+                                    <input class="py-2 green-button" id="correctQuiz" type="button" value="Play again"
+                                        onclick="reset()">
 
                                 </div>
                                 <h4 class="text-center m-3 py-2" id="showCorrectAnswers"></h4>
@@ -66,8 +69,9 @@
         </section>
 
     </article>
-    <footer class="row text-center text-lg-start gradient-custom">
-        <div class="container d-flex justify-content-center py-5">
+
+    <footer class="row mt-5 text-center text-lg-start gradient-custom">
+        <div class="container  d-flex justify-content-center py-5">
             <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-dark">
                 <i class="fab fa-facebook-f"></i>
             </button>
