@@ -6,6 +6,10 @@
     vertical-align: auto;
 }
 
+#question {
+    font-size: 1.5em;
+}
+
 .gradient-custom {
     background: rgb(90, 167, 57);
     ;
@@ -41,6 +45,6 @@
     top: 1px;
 }
 
-#correctQuiz {
+.correctQuiz {
     width: 85%;
 }
