@@ -1,14 +1,15 @@
-/* @font-face {
-    font-family: LongShot;
-    src: url('./fonts/Long_Shot.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-} */
-
 * {
+
     margin: 0;
     box-sizing: border-box;
-    font-family: "Times New Roman", Times, serif; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body {
+
+    background-color: gainsboro;
+
 }
 
 header {
@@ -16,13 +17,12 @@ header {
     background: rgb(211, 211, 211);
     background: linear-gradient(0deg, rgba(211, 211, 211, 1) 9%, rgb(160, 160, 160) 48%);
     width: 100%;
-    padding: 3%;
- 
-}
-
-body {
-
-    background-color: gainsboro;
+    padding: 2%;
+    color: rgb(230, 89, 37);
+    font-weight: bold;
+    font-size: x-large;
+    font-style: italic;
+    text-decoration: overline;
 
 }
 
@@ -40,19 +40,130 @@ nav {
 }
 
 nav a {
-    
+
+    font-size: large;
+    color: rgb(255, 119, 0);
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+nav a:visited {
+
+    color: rgb(255, 81, 110);
+    font-weight: bolder;
     text-decoration: none;
 
 }
 
 .articulo {
-    
-    flex: initial;
-    width: 200px;
-    margin-right: 200px;    
- 
+
+    display: inline-block;
+    width: 22%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    padding: 1%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border: 2px solid rgb(255, 119, 0);
+    border-radius: 5%;
+    background-color: rgb(255, 119, 0);
+    text-align: center;
+
 }
 
-.articulo img{
-    width:33%;
+.articulo:active {
+
+    display: inline-block;
+    width: 22%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    padding: 1%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border: 2px solid rgb(125, 119, 0);
+    border-radius: 5%;
+    background-color: rgb(125, 119, 0);
+    text-align: center;
+
+}
+
+.articulo p {
+
+    width: 100%;
+    font-size: large;
+    color: gainsboro;
+    font-weight: bolder;
+}
+
+.articulo h3 {
+
+    visibility: visible;
+    width: 100%;
+
+}
+
+.articulo h3:hover {
+
+    visibility: visible;
+    width: 100%;
+    color: green;
+
+}
+
+.articulo img {
+
+    width: 80%;
+
+}
+
+#elinputSection {
+
+    margin-left: 25%;
+
+}
+
+input,
+#elinputSection p {
+
+    display: inline;
+    margin-left: 5px;
+
+
+}
+
+input:focus {
+
+    padding: 4%;
+    background-color: orange;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: x-large;
+
+}
+
+input[type="radio"]:checked {
+
+    visibility: hidden;
+
+}
+
+footer {
+
+    margin-top:3%;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: medium;
+    background-color: orangered;
+    
+
+}
+
+footer a  {
+
+    text-decoration: none;
+    color:black;
+
 }
