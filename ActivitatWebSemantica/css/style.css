@@ -1,0 +1,58 @@
+/* @font-face {
+    font-family: LongShot;
+    src: url('./fonts/Long_Shot.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+} */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif; 
+}
+
+header {
+
+    background: rgb(211, 211, 211);
+    background: linear-gradient(0deg, rgba(211, 211, 211, 1) 9%, rgb(160, 160, 160) 48%);
+    width: 100%;
+    padding: 3%;
+ 
+}
+
+body {
+
+    background-color: gainsboro;
+
+}
+
+nav {
+
+    width: 100%;
+    background-color: lightgrey;
+    padding: 1%;
+    margin-bottom: 7%;
+    border: 2px solid lightgrey;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    text-align: center;
+
+}
+
+nav a {
+    
+    text-decoration: none;
+
+}
+
+.articulo {
+    
+    flex: initial;
+    width: 200px;
+    margin-right: 200px;    
+ 
+}
+
+.articulo img{
+    width:33%;
+}
