@@ -1,18 +1,19 @@
 <?php
 
-    function varName( $v ) {
-        $trace = debug_backtrace();
-        $vLine = file( __FILE__ );
-        $fLine = $vLine[ $trace[0]['line'] - 1 ];
-        preg_match( "#\\$(\w+)#", $fLine, $match );
-        print_r( $match );
+    function getVariavleName($var) {
+        foreach($GLOBALS as $varName => $value) {
+            if ($value === $var) {
+                return $varName;
+            }
+        }
+        return;
     }
     
     function doSelectFromArray($option)
     {
         
-        $codiSelect = "<label for='" . $option . "'>" . $option . "</label>
-        <select name='" . $option . "'>";
+        $codiSelect = "<label for='" . getVariavleName($option) . "'>" . getVariavleName($option) . "</label>
+        <select name='" . getVariavleName($option) . "'>";
         
         foreach ($option as $key) {
             
@@ -28,10 +29,9 @@
             
             foreach ($option as $key ) {
                 
+                echo "<label for='" . $key . "'>" . $key . 
+                "</label><input type='checkbox' name='" . $key . "' id='" . $key . "'>";
                 
-
             }
 
         }
-
-?>

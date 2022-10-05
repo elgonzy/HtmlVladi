@@ -18,7 +18,7 @@ include_once("./inc/funcions.inc");
 
     <?php
         
-        $religions = array("Cristiano" , "Judio" , "Vladimista" , "Musulman");
+        $religions = array("CristianoSIUU" , "Judio" , "Vladimista" , "Negrata");
         $hobbies = array("Pajillero" , "Otaku", "Mobil" , "Cotxes" , "tractor" , "pages" , "drogadicte" , "alcoholic");
         $edat = array("entre 0 i 30" , "entre 31 i 50" , "entre 51 i 60" , "entre 61 i 90");
 
