@@ -1,0 +1,55 @@
+*{
+
+    margin: 0px;
+
+}
+
+h1, h2, h3, p, a{
+
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+.flex-container {
+
+    display: flex;
+
+}
+
+header, footer {
+    
+    flex-basis: 100%;
+    background-color: aqua;
+    padding-top: 4% ;
+    padding-bottom: 4% ;
+}
+
+article {
+    
+    flex-basis: 100%;
+
+}
+
+section {
+    
+    flex-basis: 25%;
+    padding-top: 2%;
+    padding-bottom: 19%;
+    background-color: blueviolet;
+
+}
+
+#main-section {
+    
+    flex-basis: 50%;
+    background-color: coral;
+
+}
