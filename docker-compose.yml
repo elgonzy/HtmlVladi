@@ -2,7 +2,7 @@ version: '3.8'
 services:
   php-apache-environment:
     container_name: php-apache
-    image: php:8.0-apache
+    image: fc99ab500833
     volumes:
       - /home/adri/Documents/HtmlVladi:/var/www/html/
     ports:
@@ -18,12 +18,3 @@ services:
         MYSQL_PASSWORD: 1234
     ports:
         - "9906:3306"
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-        - '8080:80'
-    restart: always
-    environment:
-        PMA_HOST: db
-    depends_on:
-        - db
