@@ -1,12 +1,12 @@
-
-CREATE TABLE USERS (
-    userName varchar(30),
-    userPassword int,
+CREATE DATABASE activitatBBDD;
+USE activitatBBDD;
+CREATE TABLE USUARIS (
+    nom varchar(30),
+    contrasenya int,
     edat int
 );
-
 INSERT INTO
-    USERS
+ USUARIS
 VALUES
     ('Adri', 12, 19),
     ('Jose', 12, 21),

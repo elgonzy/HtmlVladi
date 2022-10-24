@@ -1,43 +1,38 @@
 <?php
 
-$host = 'db';
-$userDatabase = 'root';
-$passDatabase = '1234';
-$mydatabase = 'my_database';
+    $host = 'db';
+    $userDatabase = 'root';
+    $passDatabase = '1234';
+    $mydatabase = 'activitatBBDD';
 
-$userIn = $_POST["user"];
-$passwordIn = $_POST["psw"];
+    $nomIn = $_POST["nomIn"];
+    $contrasenyaIn = $_POST["contrasenyaIn"];
 
-$conn = new mysqli($host, $userDatabase, $passDatabase, $mydatabase);
+    $conn = new mysqli($host, $userDatabase, $passDatabase, $mydatabase);
 
-$sql = "SELECT userName, userPassword, edat FROM users";
+    $sql = "SELECT nom, contrasenya, edat FROM USUARIS WHERE nom='" . $nomIn . "' LIMIT 1";
 
-$result = $conn->query($sql);
+    $result = $conn->query($sql);
 
-if (!$result){
+    if (!$result){
 
-    echo ("ERROR!");
+        echo (" ERROR!");
 
-}else {
+    }else {
 
-    if ($result->num_rows == 0)
-        echo ("no hi ha resultats");
-
-    if ($result->num_rows > 0) {
-        
         $row = $result->fetch_array();
-        if ($row["userName"] == $userIn && $row["userPassword"] == $passwordIn) {
+        if ($row["nom"] == $nomIn && $row["contrasenya"] == $contrasenyaIn) {
 
             session_start();
-            $_SESSION['userName'] = $userIn;
+            $_SESSION['username'] = $nomIn;
             header('location: index.php');
-        
-        } else {
 
+        } else {
+            session_start();
+            session_destroy();
             header('location: index.html');
-        
+
         }
     }
-}
-
-
+    
+?>
