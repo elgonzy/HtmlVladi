@@ -2,9 +2,9 @@ version: '3.8'
 services:
   php-apache-environment:
     container_name: php-apache
-    image: 1199902ad5fd
+    image: **IMAGEN**
     volumes:
-      - C:\Users\Adri\Documents\HtmlVladi:/var/www/html/
+      - **VOLUMEN**:/var/www/html/
     ports:
       - 8000:80
   db:
