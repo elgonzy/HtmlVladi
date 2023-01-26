@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#reducir").click(function() {
+
+                let widthImg1 = $("#img1").width();
+                widthImg1 = widthImg1 / 2;
+                let heightImg1 = $("#img1").height();
+                heightImg1 = heightImg1 / 2;
+
+                let widthImg2 = $("#img2").width();
+                widthImg2 = widthImg2 / 2;
+                let heightImg2 = $("#img2").height();
+                heightImg2 = heightImg2 / 2;
+
+                $("#img1").width(widthImg1);
+                $("#img1").height(heightImg1);
+
+                $("#img2").width(widthImg2);
+                $("#img2").height(heightImg2);
+
+            });
+
+            $("#aumentar").click(function() {
+
+                let widthImg1 = $("#img1").width();
+                widthImg1 = widthImg1 * 2;
+                let heightImg1 = $("#img1").height();
+                heightImg1 = heightImg1 * 2;
+
+                let widthImg2 = $("#img2").width();
+                widthImg2 = widthImg2 * 2;
+                let heightImg2 = $("#img2").height();
+                heightImg2 = heightImg2 * 2;
+
+                $("#img1").width(widthImg1);
+                $("#img1").height(heightImg1);
+
+                $("#img2").width(widthImg2);
+                $("#img2").height(heightImg2);
+
+            });
+
+        });
+    </script>
+
+    <style>
+        #img1 {
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+        }
+        
+        #img2 {
+            height: 200px;
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="img1" src="assets/img/a.png" alt="">
+    <br>
+    <img id="img2" src="assets/img/b.png" alt="">
+    <br>
+
+    <button id="reducir">Reducir</button>
+    <button id="aumentar">Aumentar</button>
+</body>
+
+</html>

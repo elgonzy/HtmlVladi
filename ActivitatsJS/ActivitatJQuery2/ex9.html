@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("button").click(function() {
+
+                $("#div1").text("width: " + $("#div1").width() + " height: " + $("#div1").height() + "innerWidth: " + $("#div1").innerWidth() + " innerHeight: " + $("#div1").innerHeight() + "outerWidth: " + $("#div1").outerWidth() + " outerHeight: " + $("#div1").outerHeight());
+
+                $("#div2").text("width: " + $("#div2").width() + " height: " + $("#div2").height() + "innerWidth: " + $("#div2").innerWidth() + " innerHeight: " + $("#div2").innerHeight() + "outerWidth: " + $("#div2").outerWidth() + " outerHeight: " + $("#div2").outerHeight());
+
+            });
+        });
+    </script>
+    <style>
+        #div1 {
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid #ef9a9a;
+            background-color: #ffebee;
+        }
+        
+        #div2 {
+            height: 200px;
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #9fa8da;
+            background-color: #e8eaf6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1"></div>
+    <br>
+    <div id="div2"></div>
+    <br>
+
+    <button>mostra les dimensions del div</button>
+
+</body>
+
+</html>

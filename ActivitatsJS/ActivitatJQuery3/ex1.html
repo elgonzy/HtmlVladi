@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Selectors CSS i jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.b').before('<p>Este es un nuevo parrafo antes de b.</p>');
+            $('.b').after('<p>Este es un nuevo parrafo despues de b.</p>');
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class='a'>
+        <div class='b'>b</div>
+    </div>
+
+</body>
+
+</html>
