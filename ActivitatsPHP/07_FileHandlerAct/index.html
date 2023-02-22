@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>FileHandlerAct</title>
+</head>
+
+<body>
+    <form action="sumbit.php" method="post" enctype="multipart/form-data">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="usersurname">User Surname:</label>
+        <input type="text" id="usersurname" name="usersurname" required><br><br>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+        <label for="number_phone">Phone Number:</label>
+        <input type="text" id="number_phone" name="number_phone" required><br><br>
+        <label for="cp">Postal Code:</label>
+        <input type="text" id="cp" name="cp" required><br><br>
+        <label for="photo">Photo :</label>
+        <input type="file" id="photo" name="photo"><br><br>
+        <label for="cv">CV :</label>
+        <input type="file" id="cv" name="cv"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
