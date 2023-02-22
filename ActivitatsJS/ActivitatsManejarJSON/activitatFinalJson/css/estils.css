@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+#title {
+    font-family: 'Bebas Neue';
+    font-size: 4em;
+    vertical-align: auto;
+}
+
+#question {
+    font-size: 1.5em;
+}
+
+.gradient-custom {
+    background: rgb(90, 167, 57);
+    ;
+}
+
+.background-img {
+    background-image: url("../img/enigma-batman.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.green-button {
+    background-color: rgba(83, 157, 52, 1);
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Bebas Neue';
+    font-size: 1.35em;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.green-button:hover {
+    background-color: #2e740c;
+}
+
+.green-button:active {
+    position: relative;
+    top: 1px;
+}
+
+.correctQuiz {
+    width: 85%;
+}

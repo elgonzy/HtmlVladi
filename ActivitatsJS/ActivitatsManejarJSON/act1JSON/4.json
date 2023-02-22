@@ -1,0 +1,67 @@
+{
+  "homes": [
+    {
+      "street": "carrer del dimoni",
+      "number": "1",
+      "door": "2",
+      "residents": [
+        {
+          "nif": "1212223",
+          "name": "enja",
+          "secondname": "rmijo",
+          "birthdate": "2002-12-12",
+          "sex": "helio"
+        },
+        {
+          "nif": "1212223",
+          "name": "enja",
+          "secondname": "rmijo",
+          "birthdate": "2002-12-12",
+          "sex": "helio"
+        }]
+      
+    },
+    {
+      "street": "carrer del dimoni",
+      "number": "1",
+      "door": "2",
+      "residents": [
+        {
+          "nif": "1212223",
+          "name": "enja",
+          "secondname": "rmijo",
+          "birthdate": "2002-12-12",
+          "sex": "helio"
+        },
+        {
+          "nif": "1212223",
+          "name": "enja",
+          "secondname": "rmijo",
+          "birthdate": "2002-12-12",
+          "sex": "helio"
+        }]
+      
+    },
+    {
+      "street": "carrer del dimoni",
+      "number": "1",
+      "door": "2",
+      "residents": [
+        {
+          "nif": "1212223",
+          "name": "enja",
+          "secondname": "rmijo",
+          "birthdate": "2002-12-12",
+          "sex": "helio"
+        },
+        {
+          "nif": "1212223",
+          "name": "enja",
+          "secondname": "rmijo",
+          "birthdate": "2002-12-12",
+          "sex": "helio"
+        }]
+      
+    }
+  ]
+}

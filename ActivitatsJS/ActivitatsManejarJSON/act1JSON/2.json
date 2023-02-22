@@ -1,0 +1,46 @@
+{
+    "contacte": [
+        {
+            "nom": "isma",
+            "direcio": {
+                "carrer": "carrer del sexe",
+                "post": "08458",
+                "ciutat": "barcelona"
+            },
+            "mitjansDeContacte": {
+                "telefon": "666999666",
+                "movil": "999666999",
+                "email": "sex@gmail.com"
+            }
+        },
+        {
+            "contacte": {
+                "nom": "maricon",
+                "direcio": {
+                    "carrer": "carrer del benja",
+                    "post": "05458",
+                    "ciutat": "girona"
+                },
+                "mitjansDeContacte": {
+                    "telefon": "666999666",
+                    "movil": "999666999",
+                    "email": "maricon@gmail.com"
+                }
+            }
+        },
+        {
+            "contacte": {
+                "nom": "pol",
+                "direcio": {
+                    "carrer": "carrer del tonto",
+                    "post": "05258",
+                    "ciutat": "lleida"
+                },
+                "mitjansDeContacte": {
+                    "telefon": "666999666",
+                    "movil": "999666999",
+                    "email": "lleidatanjaja@gmail.com"
+                }
+            }
+        }]
+    }
