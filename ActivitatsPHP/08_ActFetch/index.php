@@ -13,3 +13,11 @@ require_once 'assets\PHP\Base.php';
     // Obtenemos max index
     echo $base -> getMaxIndex();
 
+    $nom = "";
+    if (isset($_POST['nom'])) {
+        if ($_POST['nom'] != $nom) {
+
+            $base -> insertDictadorInBBDD();
+
+        }
+    }

@@ -92,6 +92,7 @@ class Base {
     // utils in dictadors only 
 
     private $dictadorsData;
+    private $maxIndex;
     
     public function getDictadorById($id)
     {
@@ -133,10 +134,23 @@ class Base {
     {   
         if (isset($this -> dictadorsData)) {
 
-            return count($this -> dictadorsData);
+            return $this -> maxIndex = count($this -> dictadorsData);
 
         }
         
+    }
+
+    public function insertDictadorInBBDD() {
+        $id = $this -> maxIndex + 1;
+        $nom = $_POST['nom'];
+        $nacionalitat = $_POST['nacionalitat'];
+        $any_mort = $_POST['any_mort'];
+        $foto = $_POST['foto'];
+    
+        $sql = "INSERT INTO dictadors (id,nom, nacionalitat, any_mort, foto) VALUES ('$id','$nom', '$nacionalitat', $any_mort, '$foto')";
+        
+        $this->query($sql);
+
     }
     
 }

@@ -23,6 +23,42 @@ function handleResponse(data) {
 
 }
 
+function sendDictadorData() {
+    console.log(true);
+    // Obtenemos los valores del formulario
+    let nom = document.getElementById("nom").value;
+    let nacionalitat = document.getElementById("nacionalitat").value;
+    let any_mort = document.getElementById("any_mort").value;
+    let foto = document.getElementById("foto").value;
+
+
+    // Creamos un objeto FormData y añadimos los valores del formulario
+    let formData = new FormData();
+    formData.append("nom", nom);
+    formData.append("nacionalitat", nacionalitat);
+    formData.append("any_mort", any_mort);
+    formData.append("foto", foto);
+
+    // Enviamos los datos mediante una petición fetch
+    fetch("index.php", {
+            method: "POST",
+            body: formData,
+        })
+        .then((response) => response.text())
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+
+    maxIndex++;
+    document.getElementById("nom").value = "";
+    document.getElementById("nacionalitat").value = "";
+    document.getElementById("any_mort").value = "";
+    document.getElementById("foto").value = "";
+
+}
 
 function incrementIndex() {
 

@@ -15,6 +15,22 @@
     </div>
     <button class="btn" onclick="decreaseIndex()">-</button>
     <button class="btn" onclick="incrementIndex()">+</button>
+    <form id="form-nuevo-dictador">
+        <label for="nom">Nombre:</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="nacionalitat">Nacionalidad:</label>
+        <input type="text" id="nacionalitat" name="nacionalitat" required>
+
+        <label for="any_mort">Año de muerte:</label>
+        <input type="number" id="any_mort" name="any_mort" required>
+
+        <label for="foto">Foto:</label>
+        <input type="url" id="foto" name="foto" required>
+
+        <input type="button" onclick="sendDictadorData()" value="Enviar">
+    </form>
+
 </body>
 
 </html>
