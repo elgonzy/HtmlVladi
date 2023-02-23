@@ -32,11 +32,11 @@ body {
 
 .dictador-info {
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
 
-/* Estilo del botón de editar */
+/* Estilo del botï¿½n de editar */
 
 .btn {
     background-color: #ff6961;
@@ -50,14 +50,14 @@ body {
 }
 
 
-/* Efecto hover para el botón de editar */
+/* Efecto hover para el botï¿½n de editar */
 
 .btn:hover {
     background-color: #ff8c7a;
 }
 
 
-/* Estilo del botón de eliminar */
+/* Estilo del botï¿½n de eliminar */
 
 .delete-btn {
     background-color: #d3d3d3;
@@ -70,7 +70,7 @@ body {
 }
 
 
-/* Efecto hover para el botón de eliminar */
+/* Efecto hover para el botï¿½n de eliminar */
 
 .delete-btn:hover {
     background-color: #bfbfbf;

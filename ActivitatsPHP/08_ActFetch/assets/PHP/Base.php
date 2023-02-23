@@ -115,7 +115,7 @@ class Base {
             $html .= "<div class='dictador-info' >Nombre: ".$dictador['nom']."</div>";
             $html .= "<div class='dictador-info' >Nacionalidad: ".$dictador['nacionalitat']."</div>";
             $html .= "<div class='dictador-info' >Año de muerte: ".$dictador['any_mort']."</div>";
-            $html .= "<div id='dictador-img' >Foto: <img src='".$dictador['foto']."'></div>";
+            $html .= "<div class='dictador-info' >Foto: <img id='dictador-img' src='".$dictador['foto']."'></div>";
             $html .= "</div>";
             
         }else {
@@ -123,7 +123,6 @@ class Base {
             $html = "<div><p>No se ha podido obtener los datos de dictador</p></div>";
             
         }
-        
         
         return $html;
     }
