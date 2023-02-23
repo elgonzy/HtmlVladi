@@ -15,6 +15,29 @@ class Base {
         echo '<div>true</div>';
     }
 
+    public function query($sql)
+    {
+        // Crea la conexión
+        $conn = mysqli_connect($this::DB_HOST, $this::DB_USER, $this::DB_PASS, $this::DB_NAME);
+            
+        // Verifica si la conexión falló
+        if (!$conn) {
+            echo "Conexión fallida: " . mysqli_connect_error();
+        }
+        
+        // Ejecuta la consulta 
+        $result = mysqli_query($conn, $sql);
+        
+        // Verifica si la consulta falló
+        if (!$result) {
+            return die("Consulta fallida: " . mysqli_error($conn));
+        }else {
+            return $result;
+        }
+        // cierro la conn
+        $conn->close();
+    }
+
     public function getImageFromURL($imgUrl)
     {
         
@@ -33,22 +56,7 @@ class Base {
         // sql syntax para updatear la foto del negrata dictador
         $sql = "UPDATE dictadors SET foto = '$destinationFile' WHERE id = '$id';";
         
-        // Crea la conexión
-        $conn = mysqli_connect($this::DB_HOST, $this::DB_USER, $this::DB_PASS, $this::DB_NAME);
-
-        // Verifica si la conexión falló
-        if (!$conn) {
-            echo "Conexión fallida: " . mysqli_connect_error();
-        }
-        
-        //ejecuta la consulta 
-        $result = mysqli_query($conn,$sql);
-
-        if (!$result) {
-            die("Consulta fallida: ". mysqli_error($conn));
-        }
-
-        return  $result;
+        return  $this -> query($sql);;
     }
 
     public function uploadPhoto($id)
@@ -91,29 +99,11 @@ class Base {
             
             // sql syntax para obtener los datos de un dictador en concreto
             $sql = "SELECT * FROM dictadors;";
-            
-            // Crea la conexión
-            $conn = mysqli_connect($this::DB_HOST, $this::DB_USER, $this::DB_PASS, $this::DB_NAME);
-            
-            // Verifica si la conexión falló
-            if (!$conn) {
-                echo "Conexión fallida: " . mysqli_connect_error();
-            }
-            
-            
-            // Ejecuta la consulta 
-            $result = mysqli_query($conn, $sql);
-            
-            // Verifica si la consulta falló
-            if (!$result) {
-                die("Consulta fallida: " . mysqli_error($conn));
-            }
+             
             
             // Guarda todos los datos en una variable privada de la clase
-            $this->dictadorsData = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            
-            // Libera la memoria del resultado de la consulta
-            mysqli_free_result($result);
+            $this->dictadorsData = mysqli_fetch_all($this -> query($sql), MYSQLI_ASSOC);
+                    
         }
 
         if (array_key_exists($id, $this->dictadorsData)) {
