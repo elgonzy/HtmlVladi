@@ -1,0 +1,77 @@
+/* Aplica fondo rosa claro al body */
+
+body {
+    background-color: #ffe6ea;
+}
+
+
+/* Estilo de los divs que contienen los datos de los dictadores */
+
+#dictador-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilo de la imagen del dictador */
+
+#dictador-img {
+    width: 30%;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+
+/* Estilo del texto de los datos del dictador */
+
+.dictador-info {
+    flex: 1;
+    text-align: right;
+}
+
+
+/* Estilo del botón de editar */
+
+.btn {
+    background-color: #ff6961;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* Efecto hover para el botón de editar */
+
+.btn:hover {
+    background-color: #ff8c7a;
+}
+
+
+/* Estilo del botón de eliminar */
+
+.delete-btn {
+    background-color: #d3d3d3;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* Efecto hover para el botón de eliminar */
+
+.delete-btn:hover {
+    background-color: #bfbfbf;
+}

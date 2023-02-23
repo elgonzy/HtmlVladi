@@ -1,0 +1,13 @@
+<button onclick="ferFetch()"> Apreta</button>
+
+<p id="kk"></p>
+<script>
+    function ferFetch() {
+
+        fetch('archivo.php')
+            .then(resposta => resposta.text()) // Procesem la resposta que arriba del php
+            .then(data => document.getElementById('kk').innerHTML = data) // La resposta procesada li assignarem al paràgraf
+            .catch(error => console.error(error)); // Mostrem error per consola si n'hi ha hagut
+
+    }
+</script>

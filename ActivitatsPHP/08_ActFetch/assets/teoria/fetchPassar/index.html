@@ -1,0 +1,21 @@
+<button onclick="ferFetch()"> Apreta</button>
+
+<p id="kk"></p>
+<script>
+
+  function ferFetch() {
+
+    const dades = new FormData();
+    dades.append('nom', 'Vladi');
+    dades.append('cognom', 'Bellavista');
+
+
+    fetch('archivo.php', {
+      method: 'POST',
+      body: dades
+    })
+      .then(resposta => resposta.text()) // Procesamos la respuesta como JSON
+      .then(data => document.getElementById('kk').innerHTML = data) // Mostramos la respuesta en la consola
+      .catch(error => console.error(error)); // Mostramos un error en caso de que ocurra
+  }
+</script>
