@@ -15,9 +15,7 @@ require_once 'assets\PHP\Base.php';
 
     $nom = "";
     if (isset($_POST['nom'])) {
-        if ($_POST['nom'] != $nom) {
-
-            $base -> insertDictadorInBBDD();
-
-        }
+    
+        $base -> insertDictadorInBBDD();
+        
     }
