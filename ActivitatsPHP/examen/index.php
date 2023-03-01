@@ -1,0 +1,21 @@
+<?php
+
+namespace index;
+use assets\PHP\utils\Base;
+require_once 'assets\PHP\Base.php';
+    
+    $base = new Base; // Instanciamos la clase base donde tengo metodos para gestionar cosas base de la actividad
+
+    $html = "";
+    
+    if ($base -> doLogin() || isset($_SESSION['username'])) {
+
+        $base -> test_connection();
+        
+    }else {
+
+        session_start();
+        session_destroy();
+        header('location: index.html');
+    
+    }
