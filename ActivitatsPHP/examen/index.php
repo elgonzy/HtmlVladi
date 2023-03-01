@@ -8,7 +8,7 @@ require_once 'assets\PHP\Base.php';
     
     if ($base -> doLogin() || isset($_SESSION['username'])) {
         
-        echo 
+        header('location: obra.html');
         
     }else {
 
