@@ -37,15 +37,7 @@ class Base {
         // cierro la conn
         $conn->close();
     }
-
-    public function updateImageInBBDD($id, $destinationFile)
-    {
-        // sql syntax para updatear la foto del negrata dictador
-        $sql = "UPDATE dictadors SET foto = '$destinationFile' WHERE id = '$id';";
-        
-        return  $this -> query($sql);;
-    }  
-
+    
     public function doLogin(){
         
         $sql = "SELECT nom, password FROM USUARIS WHERE nom='" . $_POST['nomIn'] . "' LIMIT 1";
@@ -57,16 +49,27 @@ class Base {
 
             session_start();
             $_SESSION['username'] = $_POST['nomIn'];
+            header('location: obra.html');
             return true;
 
         } else {
             session_start();
             session_destroy();
+            header('location: index.html');
             return false ;
 
         }
 
     }
+
+    public function updateImageInBBDD($id, $destinationFile)
+    {   
+        echo $destinationFile;
+        // sql syntax para updatear la foto del negrata obra
+        $sql = "UPDATE obra SET foto = '$destinationFile' WHERE idobra = '$id';";
+        
+        return  $this -> query($sql);;
+    }  
 
     public function uploadPhoto($id)
     {
@@ -97,4 +100,98 @@ class Base {
 
         }
     }
-}
+
+     // utils in examen only 
+
+     private $obraData;
+     private $maxIndex;
+     
+     public function getobraById($id)
+     {
+         if (!isset($this -> obraData)) {
+             
+             // sql syntax para obtener los datos de un obra en concreto
+             $sql = "SELECT * FROM obra;";
+              
+             
+             // Guarda todos los datos en una variable privada de la clase
+             $this->obraData = mysqli_fetch_all($this -> query($sql), MYSQLI_ASSOC);
+                     
+         }
+ 
+         if (array_key_exists($id, $this->obraData)) {
+             
+             // Obtener el registro deseado
+             $obra = $this->obraData[$id];
+                     
+             $html = "<div>";
+             $html .= "<div class='obra-info' >Titol: ".$obra['titol']."</div>";
+             $html .= "<div class='obra-info' >any: ".$obra['any']."</div>";
+             $html .= "<div class='obra-info' >Foto: <img id='obra-img' src='".$obra['foto']."'></div>";
+             $html .= "</div>";
+             
+         }else {
+             
+             $html = "<div><p>No se ha podido obtener los datos de obra</p></div>";
+             
+         }
+         
+         return $html;
+     }
+     
+     // devuelve maxIndex para js
+     // si no se ejecuta primero getDictators esta funcion no devuelve nada
+     public function getMaxIndex()
+     {   
+         if (isset($this -> obraData)) {
+ 
+             return $this -> maxIndex = count($this -> obraData);
+ 
+         }
+         
+     }
+
+     public function getId(){
+
+        $sql = "SELECT * FROM obra;";
+        
+        $result = $this -> query($sql);
+
+        $rows = $result->fetch_array();
+        $id = 0;
+
+        if (is_array($rows['idobra'])) {
+         
+            foreach ($rows['idobra'] as $row ) {
+                if ($id < intval($row)) {
+                    
+                    $id = intval($rows['idobra']);
+
+                }
+            }
+            
+        }else{
+  
+            $id = intval($rows['idobra']);
+
+        }
+
+        return $id;
+
+     }
+ 
+     public function insertObraInBBDD() {
+         $titol = $_POST['titol'];
+         $any = $_POST['any'];
+         
+         $sql = "INSERT INTO obra (titol, any) VALUES ('$titol', $any)";
+         
+         $this->query($sql);
+
+         $id = $this -> getId();
+         
+         $this -> uploadPhoto($id);
+ 
+     }
+     
+ }

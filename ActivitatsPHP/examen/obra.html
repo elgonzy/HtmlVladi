@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/app.js"></script>
+    <title>examen</title>
+</head>
+
+<body>
+
+    <header>
+        <a id="username"></a>
+        <a href="tancarsessio.php">cerrar session</a>
+    </header>
+    <div id="obra-container">
+    </div>
+
+    <button onclick="incrementIndex()">+</button>
+    <button onclick="decreaseIndex()">-</button>
+
+    <form action="agregarObra.php" method="post" enctype="multipart/form-data">
+        <label for="titol">titol: </label>
+        <input type="text" name="titol" id="titol">
+        <label for="any">any: </label>
+        <input type="text" name="any" id="any">
+        <label for="photo">Photo :</label>
+        <input type="file" id="photo" name="photo"><br><br>
+
+        <input type="submit" value="enviar">
+
+    </form>
+
+</body>
+
+</html>
