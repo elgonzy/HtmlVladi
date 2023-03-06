@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canviar el color del text amb jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-size: 24px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Canvia el color del text amb jQuery</h1>
+    <p>Selecciona un color del menú desplegable i clica el botó per aplicar el canvi.</p>
+
+    <div>
+        <label for="color">Selecciona un color:</label>
+        <select id="color">
+      <option value="black">Negre</option>
+      <option value="red">Vermell</option>
+      <option value="blue">Blau</option>
+      <option value="green">Verd</option>
+      <option value="purple">Lila</option>
+    </select>
+        <button id="canviar-color">Canviar color</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#canviar-color").click(function() {
+                var colorSeleccionat = $("#color").val();
+                $("body").css("color", colorSeleccionat);
+            });
+        });
+    </script>
+</body>
+
+</html>

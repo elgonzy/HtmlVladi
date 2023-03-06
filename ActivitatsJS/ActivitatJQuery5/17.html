@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Formulari amb focus i blur</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <form>
+        <label for="camp-text">Introdueix el teu nom:</label>
+        <input type="text" id="camp-text" name="nom">
+    </form>
+
+    <p id="text"></p>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+
+
+        $("#camp-text").focus(function() {
+            $("#text").text("Focus");
+        });
+
+        $("#camp-text").blur(function() {
+            $("#text").text("");
+            alert("Blur");
+
+        });
+
+
+    });
+</script>
+
+</html>

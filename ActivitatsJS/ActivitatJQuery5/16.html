@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missatges amb ratolí</title>
+    <style>
+        #caixa {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 24px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="caixa">
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#caixa").mouseenter(function() {
+            $(this).text("Hola, ratolí dintre del div");
+        });
+        $("#caixa").mouseleave(function() {
+            $(this).text("Adéu, ratolí fora del div");
+        });
+    });
+</script>
+
+</html>

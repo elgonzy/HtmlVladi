@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemple de jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="element">Fes clic, mou el ratolí, passa el ratolí per sobre i surt del quadre</div>
+    <script>
+        $(document).ready(function() {
+            $("#element").on({
+                click: function() {
+                    alert("Has clicat al quadre");
+                },
+                mousemove: function() {
+                    alert("Has mogut el ratolí pel quadre");
+                },
+                mouseenter: function() {
+                    alert("Has passat el ratolí per sobre del quadre");
+                },
+                mouseleave: function() {
+                    alert("Has sortit del quadre");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

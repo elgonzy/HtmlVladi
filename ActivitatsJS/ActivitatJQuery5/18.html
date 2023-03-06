@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemple de jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <a href="#" id="enllac-clic">Fes clic aquí</a>
+    <br>
+    <a href="#" id="enllac-doble-clic">Fes doble clic aquí</a>
+    <script>
+        $(document).ready(function() {
+            $("#enllac-clic").click(function() {
+                alert("Hola, has fet clic");
+            });
+
+            $("#enllac-doble-clic").dblclick(function() {
+                alert("Hola, has fet doble clic");
+            });
+        });
+    </script>
+</body>
+
+</html>
