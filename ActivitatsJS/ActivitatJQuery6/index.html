@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Effects</title>
+    <style>
+        #container {
+            margin: 50px auto;
+            width: 300px;
+            text-align: center;
+        }
+        
+        #container img {
+            width: 100%;
+        }
+        
+        #buttons {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        button {
+            padding: 10px;
+            margin-right: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Fade In
+            $('#fadeIn').on('click', function() {
+                $('#container').find('*').fadeIn();
+            });
+
+            // Fade Out
+            $('#fadeOut').on('click', function() {
+                $('#container').find('*').fadeOut();
+            });
+
+            // Fade Toggle
+            $('#fadeToggle').on('click', function() {
+                $('#container').find('*').fadeToggle();
+            });
+
+            // Fade To
+            $('#fadeTo').on('click', function() {
+                $('#container').find('*').fadeTo('slow', 0.5);
+            });
+
+            // Hide
+            $('#hide').on('click', function() {
+                $('#container').find('*').hide();
+            });
+
+            // Show
+            $('#show').on('click', function() {
+                $('#container').find('*').show();
+            });
+
+            // Toggle
+            $('#toggle').on('click', function() {
+                $('#container').find('*').toggle();
+            });
+
+            // Magic
+            $('#magic').on('click', function() {
+                $('#container').find('*').fadeIn().fadeOut().fadeIn().fadeOut().fadeIn().fadeOut().fadeIn().fadeOut().fadeIn();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <img src="./a.jpg" alt="Image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div id="buttons">
+        <button id="fadeIn">Fade In</button>
+        <button id="fadeOut">Fade Out</button>
+        <button id="fadeToggle">Fade Toggle</button>
+        <button id="fadeTo">Fade To</button>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <button id="toggle">Toggle</button>
+        <button id="magic">Magic</button>
+    </div>
+</body>
+
+</html>
