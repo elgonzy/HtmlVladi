@@ -42,9 +42,10 @@ class WeatherApiService {
                 $this->townWind = $data['viento'];
                 $this->townState = $data['stateSky']['description'];
 
-                foreach ($data['pronostico']['proximos_dias'] as $i => $dia) {
-                    
-                    $this->townTemp[$i+1] = $this->calculateAverage($dia['temperatura']['minima'],$dia['temperatura']['maxima']);
+                foreach ($data['proximos_dias'] as $dia) {
+                    $i = 0;
+                    $i++;
+                    $this->townTemp[$i] = $this->calculateAverage($dia['temperatura']['minima'],$dia['temperatura']['maxima']);
 
                 }
 
