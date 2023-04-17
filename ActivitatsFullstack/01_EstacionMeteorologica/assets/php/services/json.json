@@ -1,0 +1,1089 @@
+{
+    "origin": {
+        "productor": "Agencia Estatal de Meteorolog\u00eda - AEMET. Gobierno de Espa\u00f1a",
+        "web": "https:\/\/www.aemet.es",
+        "language": "es",
+        "copyright": "\u00a9 AEMET. Autorizado el uso de la informaci\u00f3n y su reproducci\u00f3n citando a AEMET como autora de la misma.",
+        "nota_legal": "https:\/\/www.aemet.es\/es\/nota_legal",
+        "descripcion": "elTiempo.net muestra la informaci\u00f3n meteorol\u00f3gica creada por \u00a9 AEMET"
+    },
+    "title": "elTiempo.net | El tiempo en Cardedeu (Barcelona)",
+    "metadescripcion": "El tiempo en Cardedeu (Barcelona)",
+    "keywords": "Cardedeu, Provincia de Barcelona, previsi\u00f3n meteorol\u00f3gica, previsi\u00f3n del tiempo, Espa\u00f1a, viento, humedad, precipitaciones, lluvia, estado del cielo",
+    "municipio": {
+        "CODIGOINE": "08046000000",
+        "ID_REL": "1080462",
+        "COD_GEO": "08135",
+        "CODPROV": "08",
+        "NOMBRE_PROVINCIA": "Barcelona",
+        "NOMBRE": "Cardedeu",
+        "POBLACION_MUNI": 17698,
+        "SUPERFICIE": 1223.9161,
+        "PERIMETRO": 21596,
+        "CODIGOINE_CAPITAL": "08046000101",
+        "NOMBRE_CAPITAL": "Cardedeu",
+        "POBLACION_CAPITAL": "17346",
+        "HOJA_MTN25": "0393-2",
+        "LONGITUD_ETRS89_REGCAN95": 2.35643981,
+        "LATITUD_ETRS89_REGCAN95": 41.63857345,
+        "ORIGEN_COORD": "Mapa",
+        "ALTITUD": 195,
+        "ORIGEN_ALTITUD": "MDT5",
+        "DISCREPANTE_INE": 0
+    },
+    "fecha": "2023-04-17",
+    "stateSky": {
+        "description": "Despejado",
+        "id": "11"
+    },
+    "temperatura_actual": "18",
+    "temperaturas": {
+        "max": "20",
+        "min": "8"
+    },
+    "humedad": "52",
+    "viento": "15",
+    "precipitacion": "0",
+    "lluvia": "25",
+    "imagen": null,
+    "pronostico": {
+        "hoy": {
+            "@attributes": {
+                "fecha": "2023-04-17",
+                "orto": "07:07",
+                "ocaso": "20:33"
+            },
+            "estado_cielo": [
+                "17",
+                "17",
+                "17",
+                "17",
+                "11",
+                "11",
+                "11",
+                "11",
+                "11",
+                "11",
+                "12",
+                "16",
+                "12",
+                "15n",
+                "14n",
+                "17n"
+            ],
+            "precipitacion": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+            ],
+            "prob_precipitacion": [
+                "0",
+                "0",
+                "25"
+            ],
+            "prob_tormenta": [
+                "0",
+                "0",
+                "25"
+            ],
+            "nieve": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+            ],
+            "prob_nieve": [
+                "0",
+                "0",
+                "0"
+            ],
+            "temperatura": [
+                "12",
+                "14",
+                "17",
+                "17",
+                "18",
+                "19",
+                "19",
+                "18",
+                "18",
+                "17",
+                "16",
+                "15",
+                "14",
+                "13",
+                "12"
+            ],
+            "sens_termica": [
+                "12",
+                "14",
+                "17",
+                "17",
+                "18",
+                "19",
+                "19",
+                "18",
+                "18",
+                "17",
+                "16",
+                "15",
+                "14",
+                "13",
+                "12"
+            ],
+            "humedad_relativa": [
+                "39",
+                "33",
+                "27",
+                "36",
+                "37",
+                "42",
+                "51",
+                "52",
+                "52",
+                "54",
+                "58",
+                "60",
+                "63",
+                "67",
+                "71"
+            ],
+            "viento": [{
+                    "@attributes": {
+                        "periodo": "09"
+                    },
+                    "direccion": "SE",
+                    "velocidad": "3"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "10"
+                    },
+                    "direccion": "E",
+                    "velocidad": "5"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "11"
+                    },
+                    "direccion": "E",
+                    "velocidad": "4"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12"
+                    },
+                    "direccion": "S",
+                    "velocidad": "12"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "13"
+                    },
+                    "direccion": "S",
+                    "velocidad": "13"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "14"
+                    },
+                    "direccion": "S",
+                    "velocidad": "17"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "15"
+                    },
+                    "direccion": "S",
+                    "velocidad": "19"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "16"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "17"
+                    },
+                    "direccion": "S",
+                    "velocidad": "14"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "18"
+                    },
+                    "direccion": "S",
+                    "velocidad": "13"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "19"
+                    },
+                    "direccion": "S",
+                    "velocidad": "12"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "20"
+                    },
+                    "direccion": "S",
+                    "velocidad": "8"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "21"
+                    },
+                    "direccion": "O",
+                    "velocidad": "4"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "22"
+                    },
+                    "direccion": "O",
+                    "velocidad": "5"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "23"
+                    },
+                    "direccion": "O",
+                    "velocidad": "7"
+                }
+            ],
+            "racha_max": [
+                "10",
+                "15",
+                "27",
+                "28",
+                "34",
+                "36",
+                "32",
+                "29",
+                "26",
+                "24",
+                "15",
+                "7",
+                "9",
+                "11",
+                "8"
+            ]
+        },
+        "manana": {
+            "@attributes": {
+                "fecha": "2023-04-18",
+                "orto": "07:06",
+                "ocaso": "20:34"
+            },
+            "estado_cielo": [
+                "14n",
+                "12n",
+                "11n",
+                "12n",
+                "15n",
+                "14n",
+                "12n",
+                "14n",
+                "15",
+                "12",
+                "11",
+                "14",
+                "16",
+                "46",
+                "46",
+                "16",
+                "15",
+                "12",
+                "11",
+                "11",
+                "11",
+                "11n",
+                "11n",
+                "11n"
+            ],
+            "precipitacion": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0.1",
+                "0.2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+            ],
+            "prob_precipitacion": [
+                "10",
+                "90",
+                "75",
+                "0"
+            ],
+            "prob_tormenta": [
+                "10",
+                "65",
+                "55",
+                "0"
+            ],
+            "nieve": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+            ],
+            "prob_nieve": [
+                "0",
+                "0",
+                "0",
+                "0"
+            ],
+            "temperatura": [
+                "11",
+                "11",
+                "10",
+                "10",
+                "9",
+                "9",
+                "9",
+                "10",
+                "11",
+                "13",
+                "15",
+                "17",
+                "18",
+                "19",
+                "18",
+                "17",
+                "17",
+                "18",
+                "17",
+                "16",
+                "15",
+                "14",
+                "12",
+                "11"
+            ],
+            "sens_termica": [
+                "11",
+                "11",
+                "10",
+                "10",
+                "9",
+                "9",
+                "9",
+                "10",
+                "11",
+                "13",
+                "15",
+                "17",
+                "18",
+                "19",
+                "18",
+                "17",
+                "17",
+                "18",
+                "17",
+                "16",
+                "15",
+                "14",
+                "12",
+                "11"
+            ],
+            "humedad_relativa": [
+                "75",
+                "78",
+                "77",
+                "79",
+                "78",
+                "78",
+                "71",
+                "67",
+                "66",
+                "61",
+                "55",
+                "50",
+                "46",
+                "41",
+                "47",
+                "48",
+                "43",
+                "40",
+                "42",
+                "48",
+                "52",
+                "57",
+                "60",
+                "62"
+            ],
+            "viento": [{
+                    "@attributes": {
+                        "periodo": "00"
+                    },
+                    "direccion": "SO",
+                    "velocidad": "5"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "01"
+                    },
+                    "direccion": "SO",
+                    "velocidad": "4"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "02"
+                    },
+                    "direccion": "E",
+                    "velocidad": "2"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "03"
+                    },
+                    "direccion": "S",
+                    "velocidad": "2"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "04"
+                    },
+                    "direccion": "SE",
+                    "velocidad": "1"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "05"
+                    },
+                    "direccion": "NO",
+                    "velocidad": "1"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "06"
+                    },
+                    "direccion": "NE",
+                    "velocidad": "4"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "07"
+                    },
+                    "direccion": "NE",
+                    "velocidad": "2"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "08"
+                    },
+                    "direccion": "E",
+                    "velocidad": "3"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "09"
+                    },
+                    "direccion": "NO",
+                    "velocidad": "2"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "10"
+                    },
+                    "direccion": "O",
+                    "velocidad": "8"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "11"
+                    },
+                    "direccion": "SO",
+                    "velocidad": "11"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12"
+                    },
+                    "direccion": "SO",
+                    "velocidad": "12"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "13"
+                    },
+                    "direccion": "SO",
+                    "velocidad": "15"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "14"
+                    },
+                    "direccion": "S",
+                    "velocidad": "18"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "15"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "16"
+                    },
+                    "direccion": "S",
+                    "velocidad": "8"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "17"
+                    },
+                    "direccion": "S",
+                    "velocidad": "10"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "18"
+                    },
+                    "direccion": "S",
+                    "velocidad": "11"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "19"
+                    },
+                    "direccion": "S",
+                    "velocidad": "10"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "20"
+                    },
+                    "direccion": "S",
+                    "velocidad": "4"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "21"
+                    },
+                    "direccion": "S",
+                    "velocidad": "3"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "22"
+                    },
+                    "direccion": "N",
+                    "velocidad": "3"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "23"
+                    },
+                    "direccion": "SE",
+                    "velocidad": "1"
+                }
+            ],
+            "racha_max": [
+                "8",
+                "4",
+                "3",
+                "1",
+                "1",
+                "5",
+                "4",
+                "4",
+                "4",
+                "17",
+                "23",
+                "26",
+                "30",
+                "33",
+                "27",
+                "16",
+                "21",
+                "23",
+                "22",
+                "11",
+                "4",
+                "5",
+                "1",
+                "3"
+            ]
+        }
+    },
+    "proximos_dias": [{
+            "@attributes": {
+                "fecha": "2023-04-18"
+            },
+            "prob_precipitacion": [
+                "100",
+                "90",
+                "75",
+                "10",
+                "90",
+                "75",
+                "0"
+            ],
+            "cota_nieve_prov": [
+                "1700",
+                "1600",
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    }
+                },
+                "1600",
+                "1700",
+                "1700",
+                {
+                    "@attributes": {
+                        "periodo": "18-24"
+                    }
+                }
+            ],
+            "estado_cielo": [
+                "44",
+                "45",
+                "44",
+                "13n",
+                "45",
+                "44",
+                "11"
+            ],
+            "viento": [{
+                    "@attributes": {
+                        "periodo": "00-24"
+                    },
+                    "direccion": "S",
+                    "velocidad": "20"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    },
+                    "direccion": "S",
+                    "velocidad": "20"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    },
+                    "direccion": "S",
+                    "velocidad": "20"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-06"
+                    },
+                    "direccion": "C",
+                    "velocidad": "0"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "06-12"
+                    },
+                    "direccion": "S",
+                    "velocidad": "20"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-18"
+                    },
+                    "direccion": "C",
+                    "velocidad": "0"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "18-24"
+                    },
+                    "direccion": "C",
+                    "velocidad": "0"
+                }
+            ],
+            "racha_max": [{
+                    "@attributes": {
+                        "periodo": "00-24"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-06"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "06-12"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-18"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "18-24"
+                    }
+                }
+            ],
+            "temperatura": {
+                "maxima": "20",
+                "minima": "8",
+                "dato": [
+                    "11",
+                    "18",
+                    "15",
+                    "9"
+                ]
+            },
+            "sens_termica": {
+                "maxima": "20",
+                "minima": "8",
+                "dato": [
+                    "11",
+                    "18",
+                    "15",
+                    "9"
+                ]
+            },
+            "humedad_relativa": {
+                "maxima": "80",
+                "minima": "40",
+                "dato": [
+                    "65",
+                    "45",
+                    "50",
+                    "65"
+                ]
+            },
+            "uv_max": "6"
+        },
+        {
+            "@attributes": {
+                "fecha": "2023-04-19"
+            },
+            "prob_precipitacion": [
+                "0",
+                "0",
+                "0"
+            ],
+            "cota_nieve_prov": [{
+                    "@attributes": {
+                        "periodo": "00-24"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    }
+                }
+            ],
+            "estado_cielo": [
+                "12",
+                "12",
+                "12"
+            ],
+            "viento": [{
+                    "@attributes": {
+                        "periodo": "00-24"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                }
+            ],
+            "racha_max": [{
+                    "@attributes": {
+                        "periodo": "00-24"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    }
+                }
+            ],
+            "temperatura": {
+                "maxima": "22",
+                "minima": "7"
+            },
+            "sens_termica": {
+                "maxima": "22",
+                "minima": "7"
+            },
+            "humedad_relativa": {
+                "maxima": "65",
+                "minima": "35"
+            },
+            "uv_max": "7"
+        },
+        {
+            "@attributes": {
+                "fecha": "2023-04-20"
+            },
+            "prob_precipitacion": [
+                "25",
+                "0",
+                "25"
+            ],
+            "cota_nieve_prov": [
+                "2100",
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    }
+                },
+                "2200"
+            ],
+            "estado_cielo": [
+                "13",
+                "12",
+                "13"
+            ],
+            "viento": [{
+                    "@attributes": {
+                        "periodo": "00-24"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    },
+                    "direccion": "S",
+                    "velocidad": "15"
+                }
+            ],
+            "racha_max": [{
+                    "@attributes": {
+                        "periodo": "00-24"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "00-12"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "periodo": "12-24"
+                    }
+                }
+            ],
+            "temperatura": {
+                "maxima": "23",
+                "minima": "9"
+            },
+            "sens_termica": {
+                "maxima": "23",
+                "minima": "9"
+            },
+            "humedad_relativa": {
+                "maxima": "80",
+                "minima": "35"
+            },
+            "uv_max": "7"
+        },
+        {
+            "@attributes": {
+                "fecha": "2023-04-21"
+            },
+            "prob_precipitacion": "35",
+            "cota_nieve_prov": "2200",
+            "estado_cielo": "13",
+            "viento": {
+                "direccion": "S",
+                "velocidad": "15"
+            },
+            "racha_max": {},
+            "temperatura": {
+                "maxima": "23",
+                "minima": "10"
+            },
+            "sens_termica": {
+                "maxima": "23",
+                "minima": "10"
+            },
+            "humedad_relativa": {
+                "maxima": "75",
+                "minima": "45"
+            },
+            "uv_max": "7"
+        },
+        {
+            "@attributes": {
+                "fecha": "2023-04-22"
+            },
+            "prob_precipitacion": "35",
+            "cota_nieve_prov": "1900",
+            "estado_cielo": "13",
+            "viento": {
+                "direccion": "S",
+                "velocidad": "10"
+            },
+            "racha_max": {},
+            "temperatura": {
+                "maxima": "23",
+                "minima": "10"
+            },
+            "sens_termica": {
+                "maxima": "23",
+                "minima": "10"
+            },
+            "humedad_relativa": {
+                "maxima": "75",
+                "minima": "45"
+            }
+        },
+        {
+            "@attributes": {
+                "fecha": "2023-04-23"
+            },
+            "prob_precipitacion": "85",
+            "cota_nieve_prov": "2000",
+            "estado_cielo": "23",
+            "viento": {
+                "direccion": "SO",
+                "velocidad": "15"
+            },
+            "racha_max": {},
+            "temperatura": {
+                "maxima": "22",
+                "minima": "10"
+            },
+            "sens_termica": {
+                "maxima": "22",
+                "minima": "10"
+            },
+            "humedad_relativa": {
+                "maxima": "80",
+                "minima": "40"
+            }
+        }
+    ],
+    "breadcrumb": [{
+            "name": "Provincias",
+            "url": "\/provincias",
+            "title": "El tiempo | Lista de provincias"
+        },
+        {
+            "name": "Barcelona",
+            "url": "\/provincias\/08",
+            "title": "El tiempo en la provincia de Barcelona"
+        },
+        {
+            "name": "Municipios",
+            "url": "\/provincias\/08\/municipios",
+            "title": "El tiempo | Lista de municipios de Barcelona"
+        },
+        {
+            "name": "Cardedeu",
+            "url": "\/provincias\/08\/municipios\/08135",
+            "title": "El tiempo en Cardedeu"
+        }
+    ]
+}
