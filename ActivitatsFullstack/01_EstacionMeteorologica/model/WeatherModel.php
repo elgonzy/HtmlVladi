@@ -10,6 +10,7 @@
         public function getVariables()
         {
             return array(
+                'townName',
                 'townTemp',
                 'townMinTemp',
                 'townMaxTemp',
