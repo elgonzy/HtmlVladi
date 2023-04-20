@@ -1,0 +1,49 @@
+.caja-1 {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.caja-2 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.arrow-keys {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.up {
+    border-width: 10px 10px 0 10px;
+    border-color: #000 transparent transparent transparent;
+}
+
+.down {
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #000 transparent;
+}
+
+.left {
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #000 transparent transparent;
+}
+
+.right {
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #000;
+}
