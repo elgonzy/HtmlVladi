@@ -16,9 +16,19 @@ if ($conn->connect_error) {
     die('Error al conectar a la base de datos: ' . $conn->connect_error);
 }
 
-// Obtener los ingresos del usuario para el mes actual
-$current_month = date('Y-m');
-$sql = "SELECT * FROM ingresos WHERE username = '$username' AND DATE_FORMAT(fecha, '%Y-%m') = '$current_month'";
+// Filtrar por fechas si se han enviado los campos del formulario
+if (isset($_POST['fecha_inicio']) && isset($_POST['fecha_fin'])) {
+    $fecha_inicio = $_POST['fecha_inicio'];
+    $fecha_fin = $_POST['fecha_fin'];
+
+    // Obtener los ingresos del usuario dentro del rango de fechas especificado
+    $sql = "SELECT * FROM ingresos WHERE username = '$username' AND fecha >= '$fecha_inicio' AND fecha <= '$fecha_fin'";
+} else {
+    // Obtener los ingresos del usuario para el mes actual
+    $current_month = date('Y-m');
+    $sql = "SELECT * FROM ingresos WHERE username = '$username' AND DATE_FORMAT(fecha, '%Y-%m') = '$current_month'";
+}
+
 $result = $conn->query($sql);
 
 // Cerrar la conexión a la base de datos
@@ -32,8 +42,19 @@ $conn->close();
 </head>
 <body>
    <nav>
-   <h1>Consultar Ingresos</h1>
+       <h1>Consultar Ingresos</h1>
    </nav>
+   
+   <form method="POST" action="consultar_ingresos.php">
+       <label for="fecha_inicio">Fecha de inicio:</label>
+       <input type="date" name="fecha_inicio" id="fecha_inicio">
+       
+       <label for="fecha_fin">Fecha de fin:</label>
+       <input type="date" name="fecha_fin" id="fecha_fin">
+       
+       <button type="submit">Filtrar</button>
+   </form>
+   
     <table>
         <tr>
             <th>ID</th>
@@ -52,7 +73,7 @@ $conn->close();
                 echo '</tr>';
             }
         } else {
-            echo '<tr><td colspan="4">No se encontraron ingresos para el mes actual.</td></tr>';
+            echo '<tr><td colspan="4">No se encontraron ingresos para el rango de fechas especificado.</td></tr>';
         }
         ?>
     </table>
