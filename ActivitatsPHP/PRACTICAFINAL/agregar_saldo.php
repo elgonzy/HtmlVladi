@@ -60,7 +60,9 @@ $conn->close();
     <title>GestFinan - Agregar Saldo</title>
 </head>
 <body>
-    <h1>Agregar Saldo</h1>
+    <nav>
+        <h1>Agregar Saldo</h1>
+    </nav>
     <?php
     ?>
     <form action="agregar_saldo.php" method="POST">

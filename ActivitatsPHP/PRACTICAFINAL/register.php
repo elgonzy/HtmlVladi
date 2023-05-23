@@ -58,6 +58,7 @@ $conn->close();
     <title>GestFinan - Registro</title>
 </head>
 <body>
+    <nav>GestFin</nav>
     <h1>Registro</h1>
     <?php
     // Mostrar mensajes de éxito o error, si existen

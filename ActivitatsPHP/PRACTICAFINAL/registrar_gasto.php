@@ -44,7 +44,9 @@ $conn->close();
     <title>GestFinan - Registrar Gasto</title>
 </head>
 <body>
-    <h1>Registrar Gasto</h1>
+    <nav>
+        <h1>Registrar Gasto</h1>
+    </nav>
     <?php
     // Mostrar mensajes de éxito o error, si existen
     if (isset($_SESSION['success_message'])) {

@@ -44,8 +44,9 @@ $conn->close();
     <title>GestFinan - Registrar Ingreso</title>
 </head>
 <body>
-    <h1>Registrar Ingreso</h1>
-
+    <nav>
+        <h1>Registrar Ingreso</h1>
+    </nav>
     <form action="registrar_ingreso.php" method="POST">
         <label for="categoria">Categoría:</label>
         <input type="text" id="categoria" name="categoria" required><br>

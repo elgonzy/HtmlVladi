@@ -31,7 +31,9 @@ $conn->close();
     <title>GestFinan - Consultar Gastos</title>
 </head>
 <body>
-    <h1>Consultar Gastos</h1>
+   <nav>
+        <h1>Consultar Gastos</h1>    
+   </nav>
     <table>
         <tr>
             <th>ID</th>

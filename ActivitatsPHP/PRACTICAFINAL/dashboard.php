@@ -61,9 +61,12 @@ $conn->close();
 <html>
 <head>
     <title>GestFinan - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Bienvenido, <?php echo $username; ?></h1>
+    <nav>
+        <h1>Bienvenido, <?php echo $username; ?></h1>
+    </nav>
     <img src="<?php echo $foto_perfil; ?>" alt="Foto de perfil"><br>
     <p>Email: <?php echo $email; ?></p>
     <p>Saldo: <?php echo $saldo; ?></p>
