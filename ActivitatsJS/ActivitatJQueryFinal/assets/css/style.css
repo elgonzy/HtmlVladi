@@ -1,0 +1,37 @@
+#score, #timer {
+    top: 10px;
+    font-size: 18px;
+}
+
+#score {
+    right: 10px;
+}
+
+#timer {
+    left: 10px;
+}
+
+/* Estilos para la caja 1 */
+.caja-1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+  
+  /* Estilos para la caja 2 */
+  .caja-2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+  
+  /* Estilos para la caja 3 */
+  .caja-3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+  
