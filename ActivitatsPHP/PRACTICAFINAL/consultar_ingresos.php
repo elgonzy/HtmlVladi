@@ -58,7 +58,7 @@ $conn->close();
     <table>
         <tr>
             <th>ID</th>
-            <th>Descripción</th>
+            <th>Categoria</th>
             <th>Monto</th>
             <th>Fecha</th>
         </tr>
@@ -67,7 +67,7 @@ $conn->close();
             while ($row = $result->fetch_assoc()) {
                 echo '<tr>';
                 echo '<td>' . $row['id'] . '</td>';
-                echo '<td>' . $row['descripcion'] . '</td>';
+                echo '<td>' . $row['categoria'] . '</td>';
                 echo '<td>' . $row['monto'] . '</td>';
                 echo '<td>' . $row['fecha'] . '</td>';
                 echo '</tr>';
