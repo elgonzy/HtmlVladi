@@ -3,32 +3,35 @@
 <head>
     <title>Gestor Financiero - Inicio de sesión</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <nav><h1>GestFin</h1></nav>
-    <h2>Iniciar sesión</h2>
-    <div class="form-container">
-        <form class="form-content" action="login.php" method="POST">
-            <h3 class="form-title">Iniciar sesión</h3>
+    <nav class="bg-success"><h1>GestFin</h1></nav>
+    <div class="form-container row ">
+        <p></p>
+        <p></p>
+        <form class="form-content col-4 offset-5" action="login.php" method="POST">
+            <h3 class="form-title">Iniciar sesion</h3>
             <div class="form-field">
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" required>
             </div>
 
             <div class="form-field">
-                <label for="password">Contraseña:</label>
+                <label for="password">Contrasenya:</label>
                 <input type="password" id="password" name="password" required>
             </div>
 
             <div class="form-button">
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit">Iniciar sesion</button>
             </div>
         </form>
     </div>
 
-    <h2>Registrarse</h2>
-    <div class="form-container">
-        <form class="form-content" action="register.php" method="POST">
+    <div class="form-container row">
+        <p></p>
+        <p></p>
+        <form class="form-content col-4 offset-5" action="register.php" method="POST">
             <h3 class="form-title">Registrarse</h3>
             <div class="form-field">
                 <label for="username">Usuario:</label>
@@ -36,7 +39,7 @@
             </div>
 
             <div class="form-field">
-                <label for="password">Contraseña:</label>
+                <label for="password">Contrasenya:</label>
                 <input type="password" id="password" name="password" required>
             </div>
 

@@ -3,6 +3,8 @@
 <head>
     <title>GestFinan - Dashboard</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
     <?php
@@ -90,26 +92,29 @@
     
     ?>
 
-    <nav>
-        <h1>Bienvenido, <?php echo $username; ?></h1>
+    <nav class="bg-success row mb-3">
+        <h1 class="col-10">Bienvenido, <?php echo $username; ?></h1>
+        <img class="col-2"src="<?php echo $foto_perfil; ?>" alt="Foto de perfil"><br>
+
     </nav>
-    <img src="<?php echo $foto_perfil; ?>" alt="Foto de perfil"><br>
-    <p>Email: <?php echo $email; ?></p>
-    <p>Saldo en euros: <?php echo $saldo; ?></p>
-    <p>Saldo en dólares: <?php echo $saldoUsd; ?></p>
-    <p>Saldo en bitcoins: <?php echo $saldoBtc; ?></p>
-    <p>Ingresos del mes: <?php echo $total_ingresos; ?></p>
-    <p>Gastos del mes: <?php echo $total_gastos; ?></p>
+    <div class="col-6 offset-1 mb-3">
+        <h2 class="mb-2">UserInfo</h2>
+        <p>Email: <?php echo $email; ?></p>
+        <p>Saldo en euros: <?php echo $saldo; ?></p>
+        <p>Saldo en dólares: <?php echo $saldoUsd; ?></p>
+        <p>Saldo en bitcoins: <?php echo $saldoBtc; ?></p>
+        <p>Ingresos del mes: <?php echo $total_ingresos; ?></p>
+        <p>Gastos del mes: <?php echo $total_gastos; ?></p>
 
-    <h2>Operaciones</h2>
-    <button onclick="location.href='agregar_saldo.php'">Añadir Saldo</button>
-    <button onclick="location.href='registrar_gasto.php'">Registrar Gasto</button>
-    <button onclick="location.href='registrar_ingreso.php'">Registrar Ingreso</button>
+        <h2 class="mb-2" >Operaciones</h2>
+        <button onclick="location.href='agregar_saldo.php'">Añadir Saldo</button>
+        <button onclick="location.href='registrar_gasto.php'">Registrar Gasto</button>
+        <button onclick="location.href='registrar_ingreso.php'">Registrar Ingreso</button>
 
-    <h2>Consultas</h2>
-    <button onclick="location.href='consultar_gastos.php'">Consultar Gastos</button>
-    <button onclick="location.href='consultar_ingresos.php'">Consultar Ingresos</button>
-
+        <h2 class="mb-2">Consultas</h2>
+        <button onclick="location.href='consultar_gastos.php'">Consultar Gastos</button>
+        <button onclick="location.href='consultar_ingresos.php'">Consultar Ingresos</button>
+    </div>
     <footer>
         &copy; <?php echo date('Y'); ?> GestFinan - Todos los derechos reservados.
     </footer>
