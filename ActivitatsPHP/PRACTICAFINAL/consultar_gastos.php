@@ -1,33 +1,23 @@
 <?php
 session_start();
 
-// Verificar si el usuario ha iniciado sesión
+// Verificar si el usuario ha iniciado sesiï¿½n
 if (!isset($_SESSION['username'])) {
     header('Location: index.html');
     exit;
 }
 
-// Obtener el nombre de usuario de la sesión
+// Obtener el nombre de usuario de la sesiï¿½n
 $username = $_SESSION['username'];
 
-// Establecer conexión con la base de datos
+// Establecer conexiï¿½n con la base de datos
 $conn = new mysqli('localhost', 'root', '', 'gestFin');
 if ($conn->connect_error) {
     die('Error al conectar a la base de datos: ' . $conn->connect_error);
 }
 
-// Filtrar por fechas si se han enviado los campos del formulario
-if (isset($_POST['fecha_inicio']) && isset($_POST['fecha_fin'])) {
-    $fecha_inicio = $_POST['fecha_inicio'];
-    $fecha_fin = $_POST['fecha_fin'];
 
-    // Obtener los gastos del usuario dentro del rango de fechas especificado
-    $sql = "SELECT * FROM gastos WHERE username = '$username' AND fecha >= '$fecha_inicio' AND fecha <= '$fecha_fin'";
-} else {
-    // Obtener los gastos del usuario para el mes actual
-    $current_month = date('Y-m');
-    $sql = "SELECT * FROM gastos WHERE username = '$username' AND DATE_FORMAT(fecha, '%Y-%m') = '$current_month'";
-}
+$sql = "SELECT * FROM gastos WHERE username = '$username';";
 
 $result = $conn->query($sql);
 $conn->close();
@@ -56,7 +46,7 @@ $conn->close();
     <table id="gastos-table">
         <tr>
             <th>ID</th>
-            <th>Categoría</th>
+            <th>Categorï¿½a</th>
             <th>Monto</th>
             <th>Fecha</th>
         </tr>
@@ -78,19 +68,9 @@ $conn->close();
     <a href="dashboard.php">Volver al Dashboard</a>
     <script>
         $(document).ready(function() {
-            // Enviar los datos del formulario mediante Fetch al hacer clic en el botón "Filtrar"
+            // Enviar los datos del formulario mediante Fetch al hacer clic en el botï¿½n "Filtrar"
             $('#filter-button').click(function() {
-                const formData = new FormData();
-                formData.append('fecha_inicio', $('#fecha_inicio').val());
-                formData.append('fecha_fin', $('#fecha_fin').val());
-
-                fetch('consultar_gastos.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(function(response) {
-                    location.reload(); // Recargar la página
-                });
+                
             });
 
             // Descargar el PDF mediante Fetch
@@ -114,9 +94,9 @@ $conn->close();
                     var url = URL.createObjectURL(blob);
                     var link = document.createElement('a');
                     link.href = url;
-                    link.download = 'Informe_Gastos_Mes_Actual.pdf';
+                    link.download = 'Informe_Gastos.pdf';
                     link.click();
-                    location.reload(); // Recargar la página
+                    location.reload(); // Recargar la pï¿½gina
                 })
                 .catch(function(error) {
                     console.log(error);
