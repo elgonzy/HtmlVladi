@@ -1,23 +1,33 @@
 <?php
 session_start();
 
-// Verificar si el usuario ha iniciado sesi�n
+// Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['username'])) {
     header('Location: index.html');
     exit;
 }
 
-// Obtener el nombre de usuario de la sesi�n
+// Obtener el nombre de usuario de la sesión
 $username = $_SESSION['username'];
 
-// Establecer conexi�n con la base de datos
+// Establecer conexión con la base de datos
 $conn = new mysqli('localhost', 'root', '', 'gestFin');
 if ($conn->connect_error) {
     die('Error al conectar a la base de datos: ' . $conn->connect_error);
 }
 
+// Filtrar por fechas si se han enviado los campos del formulario
+if (isset($_GET['fecha_inicio']) && isset($_GET['fecha_fin'])) {
+    $fecha_inicio = $_GET['fecha_inicio'];
+    $fecha_fin = $_GET['fecha_fin'];
 
-$sql = "SELECT * FROM gastos WHERE username = '$username';";
+    // Obtener los gastos del usuario dentro del rango de fechas especificado
+    $sql = "SELECT * FROM gastos WHERE username = '$username' AND fecha >= '$fecha_inicio' AND fecha <= '$fecha_fin'";
+} else {
+    // Obtener todos los gastos del usuario
+    $current_month = date('Y-m');
+    $sql = "SELECT * FROM gastos WHERE username = '$username' AND DATE_FORMAT(fecha, '%Y-%m') = '$current_month'";
+}
 
 $result = $conn->query($sql);
 $conn->close();
@@ -46,7 +56,7 @@ $conn->close();
     <table id="gastos-table">
         <tr>
             <th>ID</th>
-            <th>Categor�a</th>
+            <th>Categoría</th>
             <th>Monto</th>
             <th>Fecha</th>
         </tr>
@@ -68,9 +78,13 @@ $conn->close();
     <a href="dashboard.php">Volver al Dashboard</a>
     <script>
         $(document).ready(function() {
-            // Enviar los datos del formulario mediante Fetch al hacer clic en el bot�n "Filtrar"
+            // Enviar los datos del formulario mediante Fetch al hacer clic en el botón "Filtrar"
             $('#filter-button').click(function() {
-                
+                const fechaInicio = $('#fecha_inicio').val();
+                const fechaFin = $('#fecha_fin').val();
+
+                // Redirigir a la página actual con los parámetros de fecha en la URL
+                window.location.href = 'consultar_gastos.php?fecha_inicio=' + fechaInicio + '&fecha_fin=' + fechaFin;
             });
 
             // Descargar el PDF mediante Fetch
@@ -96,7 +110,6 @@ $conn->close();
                     link.href = url;
                     link.download = 'Informe_Gastos.pdf';
                     link.click();
-                    location.reload(); // Recargar la p�gina
                 })
                 .catch(function(error) {
                     console.log(error);
