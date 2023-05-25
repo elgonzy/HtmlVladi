@@ -38,9 +38,11 @@ $conn->close();
 <head>
     <title>GestFinan - Consultar Gastos</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-   <nav>
+   <nav class="bg-success mb-3 p-1">
         <h1>Consultar Gastos</h1>    
    </nav>
    <form id="filter-form">
@@ -53,29 +55,34 @@ $conn->close();
        <button type="button" id="filter-button">Filtrar</button>
        <button type="button" id="download-pdf">Descargar PDF</button>
    </form>
-    <table id="gastos-table">
-        <tr>
-            <th>ID</th>
-            <th>Categoría</th>
-            <th>Monto</th>
-            <th>Fecha</th>
-        </tr>
-        <?php
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo '<tr>';
-                echo '<td>' . $row['id'] . '</td>';
-                echo '<td>' . $row['categoria'] . '</td>';
-                echo '<td>' . $row['monto'] . '</td>';
-                echo '<td>' . $row['fecha'] . '</td>';
-                echo '</tr>';
+   <div class="row">
+        <table class="col-4 offset-5"id="gastos-table">
+            <tr>
+                <th>ID</th>
+                <th>Categoría</th>
+                <th>Monto</th>
+                <th>Fecha</th>
+            </tr>
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<tr>';
+                    echo '<td>' . $row['id'] . '</td>';
+                    echo '<td>' . $row['categoria'] . '</td>';
+                    echo '<td>' . $row['monto'] . '</td>';
+                    echo '<td>' . $row['fecha'] . '</td>';
+                    echo '</tr>';
+                }
+            } else {
+                echo '<tr><td colspan="4">No se encontraron gastos para el rango de fechas especificado.</td></tr>';
             }
-        } else {
-            echo '<tr><td colspan="4">No se encontraron gastos para el rango de fechas especificado.</td></tr>';
-        }
-        ?>
-    </table>
-    <a href="dashboard.php">Volver al Dashboard</a>
+            ?>
+        </table>
+    </div>
+    <a class="mb-4" href="dashboard.php">Volver al Dashboard</a>
+    <footer>
+        &copy; <?php echo date('Y'); ?> GestFinan - Todos los derechos reservados.
+    </footer>
     <script>
         $(document).ready(function() {
             // Enviar los datos del formulario mediante Fetch al hacer clic en el botón "Filtrar"

@@ -58,17 +58,36 @@ $conn->close();
 <html>
 <head>
     <title>GestFinan - Agregar Saldo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav>
+    <nav class="bg-success mb-3 p-1">
         <h1>Agregar Saldo</h1>
     </nav>
     <?php
     ?>
-    <form action="agregar_saldo.php" method="POST">
-        <label for="saldo">Saldo a agregar:</label>
-        <input type="number" id="saldo" name="saldo" required><br>
-        <input type="submit" value="Agregar Saldo">
-    </form>
+    <div class="row">  
+    <form class="col-4 offset-5 form-container" action="agregar_saldo.php" method="POST">
+    <div class="form-content">
+        <h3 class="form-title">Agregar Saldo</h3>
+
+        <div class="form-field">
+            <label for="saldo">Saldo a agregar:</label>
+            <input type="number" id="saldo" name="saldo" required>
+        </div>
+
+        <div class="form-button">
+            <input type="submit" value="Agregar Saldo">
+        </div>
+    </div>
+</form>
+
+    </div>
+
+    <a class="mb-4" href="dashboard.php">Volver al Dashboard</a>
+    <footer>
+        &copy; <?php echo date('Y'); ?> GestFinan - Todos los derechos reservados.
+    </footer>
 </body>
 </html>

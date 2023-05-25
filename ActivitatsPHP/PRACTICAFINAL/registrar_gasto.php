@@ -42,9 +42,11 @@ $conn->close();
 <html>
 <head>
     <title>GestFinan - Registrar Gasto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav>
+    <nav class="bg-success mb-3 p-1">
         <h1>Registrar Gasto</h1>
     </nav>
     <?php
@@ -58,14 +60,36 @@ $conn->close();
         unset($_SESSION['error_message']);
     }
     ?>
-    <form action="registrar_gasto.php" method="POST">
-        <label for="categoria">Categoría:</label>
-        <input type="text" id="categoria" name="categoria" required><br>
-        <label for="monto">Monto:</label>
-        <input type="number" id="monto" name="monto" step="0.01" required><br>
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" name="fecha" required><br>
-        <input type="submit" value="Registrar Gasto">
-    </form>
+    <div class="row">
+        <form class="col-4 offset-5 form-container" action="registrar_gasto.php" method="POST">
+        <div class="form-content">
+            <h3 class="form-title">Registrar Gasto</h3>
+
+            <div class="form-field">
+                <label for="categoria">Categoría:</label>
+                <input type="text" id="categoria" name="categoria" required>
+            </div>
+
+            <div class="form-field">
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" step="0.01" required>
+            </div>
+
+            <div class="form-field">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="form-button">
+                <input type="submit" value="Registrar Gasto">
+            </div>
+    </div>
+</form>
+
+    </div>
+    <a class="mb-4" href="dashboard.php">Volver al Dashboard</a>
+    <footer>
+        &copy; <?php echo date('Y'); ?> GestFinan - Todos los derechos reservados.
+    </footer>
 </body>
 </html>
